@@ -156,7 +156,8 @@ fi
 # Build the ffmpeg command
 echo
 cmd="ffmpeg -i \"$infile\" $timeopts -c:a copy -c:v $videocodec $bitrateopt \"$outfile\""
-echo "Running command: $cmd"
+echo "Running command: "
+echo "$cmd"
 echo
 
 # Run the command
@@ -169,3 +170,4 @@ else
     echo "An error occurred during cutting."
     echo
 fi
+# End of script
