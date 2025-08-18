@@ -93,7 +93,7 @@ while true; do
     echo
     # If start time is empty, skip duration input
     if [ -z "$ss" ]; then
-        continue
+        break
     fi
     read -p "Enter the duration (e.g. 00:00:05): " t
     echo
