@@ -130,7 +130,10 @@ done
 
 # Ask for video codec, default is vp9 if empty
 echo
-read -p "Enter video codec (press Enter for default e.g. (copy, vp9)): " videocodec
+echo "To list available video codecs: use ffmpeg -encoders command."
+echo "Note: Using 'copy' will skip re-encoding and keep the original codec."
+echo "It is the fastest method, but bitrate will be the same as the original."
+read -p "Enter video codec (press Enter for default vp9 codec): " videocodec
 echo
 if [ -z "$videocodec" ]; then
     videocodec="vp9"
@@ -163,7 +166,7 @@ echo
 # Run the command
 if eval $cmd; then
     echo
-    echo "Cut completed successfully."
+    echo "Video cut/encode completed successfully."
     echo
 else
     echo
