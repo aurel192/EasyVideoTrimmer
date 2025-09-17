@@ -128,21 +128,21 @@ while true; do
     break
 done
 
-# Ask for video codec, default is vp9 if empty
+# Ask for video codec, default is libx264 if empty
 echo
 echo "To list available video codecs: use ffmpeg -encoders command."
 echo "Note: Using 'copy' will skip re-encoding and keep the original codec."
 echo "It is the fastest method, but bitrate will be the same as the original."
-read -p "Enter video codec (press Enter for default vp9 codec): " videocodec
+read -p "Enter video codec (press Enter for default libx264 codec): " videocodec
 echo
 if [ -z "$videocodec" ]; then
-    videocodec="vp9"
+    videocodec="libx264"
 fi
 
 # Ask for video bitrate only if codec is not "copy"
 if [ "$videocodec" != "copy" ]; then
     echo
-    read -p "Enter video bitrate in kilobytes per second (e.g. 512): " bitrate
+    read -p "Enter video bitrate in kbit/sec (e.g. 512): " bitrate
     echo
     bitrateopt="-b:v ${bitrate}k"
 else
