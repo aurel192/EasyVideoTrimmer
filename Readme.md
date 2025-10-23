@@ -5,7 +5,7 @@ This `trim.sh` script provides an interactive command-line interface to trim vid
 It allows you to:
 
 - Select an input video file
-- Specify the start time and duration to trim, (optional)
+- Specify the start time and duration to trim (optional)
 - Or skip `trimming` if you just want to change the `video codec`
 - You can `trim` the video and change `codec` too.
 - Choose the output directory and filename
