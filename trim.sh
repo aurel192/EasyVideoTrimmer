@@ -128,15 +128,15 @@ while true; do
     break
 done
 
-# Ask for video codec, default is libx264 if empty
+# Ask for video codec, default is h264 if empty
 echo
 echo "To list available video codecs: use ffmpeg -encoders command."
 echo "Note: Using 'copy' will skip re-encoding and keep the original codec."
 echo "It is the fastest method, but bitrate will be the same as the original."
-read -p "Enter video codec (press Enter for default libx264 codec): " videocodec
+read -p "Enter video codec (press Enter for default h264 codec): " videocodec
 echo
 if [ -z "$videocodec" ]; then
-    videocodec="libx264"
+    videocodec="h264"
 fi
 
 # Ask for video bitrate only if codec is not "copy"

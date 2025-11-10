@@ -9,7 +9,7 @@ It allows you to:
 - Or skip `trimming` if you just want to change the `video codec`
 - You can `trim` the video and change `codec` too.
 - Choose the output directory and filename
-- Select the video codec (e.g.`libx264`, `vp9`,  or `copy`)
+- Select the video codec (e.g.`h264`, `vp9`,  or `copy`)
 - Specify the video bitrate if not using copy codec
 
 ---
